@@ -1,0 +1,37 @@
+# ~/.config is full of app state and secrets (browser cookies/tokens, machine
+# IDs, caches). Use an allowlist: ignore everything, then track only the
+# hand-maintained dotfiles below.
+
+/*
+
+# --- tracked dotfiles ---
+!.gitignore
+!CLAUDE.md
+!spec-functionalities
+!codium-flags.conf
+!mimeapps.list
+!pavucontrol.ini
+!starship.toml
+!user-dirs.dirs
+!user-dirs.locale
+
+# --- new-machine bootstrap ---
+!setup.sh
+!pkglist-native.txt
+!pkglist-aur.txt
+
+!fuzzel/
+!hypr/
+!kitty/
+!networkmanager-dmenu/
+!niri/
+!nwg-panel/
+!rofi/
+!systemd/
+!waybar/
+!wlogout/
+
+# --- never track backups or generated caches (even inside tracked dirs) ---
+*.bck
+*.bak
+*.cache

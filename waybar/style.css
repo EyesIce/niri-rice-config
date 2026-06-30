@@ -1,0 +1,140 @@
+* {
+    font-family: JetBrainsMono Nerd Font Propo;
+    font-size: 14px;
+}
+
+/* Semi-transparent dark fill for control pills. The actual blur behind the
+   bar is a compositor effect (Hyprland `layerrule = blur, waybar`); GTK CSS
+   only provides the translucency + border that the blur shows through. */
+@define-color pill-bg     rgba(17, 17, 27, 0.55);
+@define-color pill-border rgba(0, 0, 0, 0.8);
+@define-color pill-hover  rgba(49, 50, 68, 0.7);
+/* Remove default bar background for "floating" look */
+window#waybar {
+    background: transparent;
+}
+
+/* Base style for every pill/module */
+#custom-launcher,
+#custom-powermenu,
+#workspaces,
+#clock,
+#custom-keyboard-layout,
+#cpu,
+#memory,
+#network,
+#volume,
+#custom-notification {
+    background: @pill-bg;
+    border: 1px solid @pill-border;
+    border-radius: 50px;
+    padding: 5px 10px; /* top/bottom 0px - right/left 10px */
+    margin: 0 5px;
+}
+
+
+/* Specific styling for Workspaces to match the image */
+#workspaces {
+    background: @pill-bg;
+}
+
+#workspaces button.active {
+    color: #89b4fa;
+    background: #313244;
+    border-radius: 12px;
+}
+
+/* Coloring specific icons for that "pop" in the image */
+#custom-launcher {
+    color: #89b4fa;
+    font-size: 18px;
+}
+
+#custom-powermenu{
+    color: orangered;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#clock {
+    background: @pill-bg;
+    color: greenyellow;
+}
+
+#network {
+    color: aqua;
+}
+
+#volume {
+    color: coral;
+}
+
+#pulseaudio,
+#pulseaudio-slider {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+#pulseaudio {
+    padding: 0 10px 0 0;
+    min-width: 60px;
+}
+
+#pulseaudio-slider slider {
+    all: unset;
+    min-height: 0;
+    min-width: 0;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+    min-height: 6px;
+    min-width: 75px;
+    border-radius: 4px;
+    background: #1e1e2e;
+    border-color: coral;
+}
+#pulseaudio-slider highlight {
+    min-width: 6px;
+    border-radius: 5px;
+    background: coral;
+    border-color: coral;
+}
+
+#custom-notification {
+    color: violet;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* Control group hover effect */
+#custom-launcher:hover,
+#custom-powermenu:hover,
+#clock:hover,
+#custom-keyboard-layout:hover,
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#volume:hover,
+#custom-notification:hover {
+    background: @pill-hover;
+}
+
+#custom-keyboard-layout {
+    color: #f0c674;
+}
+
+#cpu {
+    color: #8aadf4;
+}
+
+#memory {
+    color: #c6a0f6;
+}
+
+#network.speed {
+    color: #a6da95;
+}

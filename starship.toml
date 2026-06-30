@@ -1,0 +1,54 @@
+# Move the prompt to a new line so you have more room to type
+add_newline = true
+
+# The 'format' defines the order and look of the bar
+format = """
+[](#7aa2f7)\
+$os\
+$username\
+[](bg:#3b4261 fg:#7aa2f7)\
+$directory\
+[](fg:#3b4261 bg:#e0af68)\
+$git_branch\
+$git_status\
+[](fg:#e0af68 bg:#16161e)\
+$time\
+[ ](fg:#16161e)\
+\n$character"""
+
+[os]
+disabled = false
+style = "bg:#7aa2f7 fg:#16161e"
+
+[os.symbols]
+Arch = "󰣇 "
+
+[username]
+show_always = true
+style_user = "bg:#7aa2f7 fg:#16161e"
+format = '[$user]($style)'
+
+[directory]
+style = "bg:#3b4261 fg:#7aa2f7"
+format = "[ $path ]($style)"
+truncation_length = 3
+fish_style_pwd_dir_length = 1
+
+[git_branch]
+symbol = ""
+style = "bg:#e0af68 fg:#16161e"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#e0af68 fg:#16161e"
+format = '[$all_status$ahead_behind ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute
+style = "bg:#16161e"
+format = '[[  $time ](fg:#7aa2f7 bg:#16161e)]($style)'
+
+[character]
+success_symbol = "[󱞩](bold fg:#9ece6a)"
+error_symbol = "[󱞩](bold fg:#f7768e)"

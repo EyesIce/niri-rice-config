@@ -1,0 +1,11 @@
+antigravity
+bibata-cursor-theme-bin
+brave-bin
+claude-code
+gemini-cli-git
+sddm-astronaut-theme
+swayosd-git
+vscodium-bin
+vscodium-bin-marketplace
+waypaper-git
+wlogout

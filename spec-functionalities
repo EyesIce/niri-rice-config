@@ -1,0 +1,43 @@
+Before starting, what I wrote here below follow this logic:
+```
+# indicate a block of imperatives commands
+- indicate the macro change or the argument
++ is the subcategory
+repeted + indicate a nested specification, correlated to the parent that is the last single + right before the multiple + repeted
+```
+# what to do
+- kitty as default terminal
+- waybar - new functionalities:
+    + wifi menu. on click it should show a window with all the networks, user must handle connection via that window
+    + volume menu, open a window that show all the devices output, handle the volume with a progress bar, user can choose the output audio
+    ++ the volume now is handled by the mouse hover the volume menu and scrolling, it lack in limits. user can increment volume over 100% and under 0%.
+    + the notificantion menu should open the menu with all notifications. User can interact with them. if a notification is about an application, it must open that application.
+    ++ here must be notified application and system changes, and updates too
+    + clock menu must open a calendar view, if no calendar has been installed, notify that
+    + shutdown menu: make it more ahestetic:
+    ++ use a modern font
+    ++ all the icon in the same line
+    ++ reduce the size of all icons to something more useful
+    ++ zoom in the icon within the menu at mouse hover
+    +++ the zoomed in icon must not override the other icons. all the icons must always visibles
+- set a default gui text editor to open files, if no one is installed notify it
+- fuzzel:
+    + application: remove duplicates name
+    + fix name: file must define which file manager will be used (nemo, dolphin, nautilus... )
+    + remove the applications that do not have a gui. to run those applications alredy exist the terminal
+    + define (default) along side the name of the default application
+- keybind:
+    + Remove Mod + (L / H), they are already binded with arrows
+    + Mod+L : lock the user session
+- notify every change to the system notification service
+- notify for all unused software
+- find conflicts in software and report them
+
+# what not to do
+- remove any session manager from the system
+- overwrite the configuration before make a backup with .bck as suffix
+- if some software is needed, do not install anything from AUR repos without verified that the BUILDPKGS file is ok and safe
+
+# create a report
+create a full report with all the implementetion went ok or not and what missing.
+The report must be in /home/$USER/system-repo

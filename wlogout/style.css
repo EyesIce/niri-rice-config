@@ -1,0 +1,66 @@
+/* GTK3 CSS (wlogout links libgtk-3). No `filter`, no `text-transform`,
+   no `%` padding. Icons are pre-rendered PNGs in ./icons (grey at rest,
+   greenyellow `-hl` on hover) generated via rsvg-convert. */
+
+window {
+    background-color: rgba(14, 14, 20, 0.9);
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    min-height: 150px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+
+    /* hide label until hover */
+    color: transparent;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    /* icon centered; label (centered by default) appears over it on hover */
+    background-position: center center;
+    background-size: 60px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    transition: background-size 180ms ease, color 180ms ease;
+}
+
+/* kill the default pre-selected/focused highlight so nothing looks chosen */
+button:focus {
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+button:hover {
+    color: #adff2f;
+    background-color: transparent;
+    background-size: 82px;
+    outline: none;
+}
+
+#lock        { background-image: url("/home/teo/.config/wlogout/icons/lock.png"); }
+#lock:hover  { background-image: url("/home/teo/.config/wlogout/icons/lock-hl.png"); }
+
+#hibernate       { background-image: url("/home/teo/.config/wlogout/icons/hibernate.png"); }
+#hibernate:hover { background-image: url("/home/teo/.config/wlogout/icons/hibernate-hl.png"); }
+
+#logout        { background-image: url("/home/teo/.config/wlogout/icons/logout.png"); }
+#logout:hover  { background-image: url("/home/teo/.config/wlogout/icons/logout-hl.png"); }
+
+#shutdown        { background-image: url("/home/teo/.config/wlogout/icons/shutdown.png"); }
+#shutdown:hover  { background-image: url("/home/teo/.config/wlogout/icons/shutdown-hl.png"); }
+
+#suspend        { background-image: url("/home/teo/.config/wlogout/icons/suspend.png"); }
+#suspend:hover  { background-image: url("/home/teo/.config/wlogout/icons/suspend-hl.png"); }
+
+#reboot        { background-image: url("/home/teo/.config/wlogout/icons/reboot.png"); }
+#reboot:hover  { background-image: url("/home/teo/.config/wlogout/icons/reboot-hl.png"); }

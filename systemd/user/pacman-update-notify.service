@@ -1,0 +1,6 @@
+[Unit]
+Description=Check for pacman updates and send a desktop notification
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/pacman-update-notify.sh
