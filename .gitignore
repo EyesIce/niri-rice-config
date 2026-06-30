@@ -6,6 +6,7 @@
 
 # --- tracked dotfiles ---
 !.gitignore
+!README.md
 !CLAUDE.md
 !spec-functionalities
 !codium-flags.conf
